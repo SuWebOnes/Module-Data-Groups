@@ -13,6 +13,14 @@ function calculateMedian(list) {
   const nums = list.filter(val => typeof val === 'number' && !isNaN(val));//Filter to keep only numeric values
    
   if (nums.length === 0) return null;  // If no valid numbers, return null
+
+    // Clone and sort the array numerically
+  const sorted = [...nums].sort((a, b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+
+    // If odd, return the middle
+  if (sorted.length % 2 !== 0) {
+    return sorted[mid];
   return median;
 }
 
