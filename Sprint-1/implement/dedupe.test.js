@@ -40,3 +40,17 @@ test("given an array of strings with no duplicates, it returns a copy of the ori
 // Given an array with strings or numbers
 // When passed to the dedupe function
 // Then it should remove the duplicate values, preserving the first occurence of each element
+test("removes duplicate numbers, preserving the first occurrence", () => {
+  expect(dedupe([1, 2, 1])).toEqual([1, 2]);
+  expect(dedupe([5, 1, 1, 2, 3, 2, 5, 8])).toEqual([5, 1, 2, 3, 8]);
+});
+
+test("removes duplicate strings, preserving the first occurrence", () => {
+  expect(dedupe(["a", "a", "a", "b", "b", "c"])).toEqual(["a", "b", "c"]);
+  expect(dedupe(["x", "y", "x", "z", "y"])).toEqual(["x", "y", "z"]);
+});
+
+test("handles mixed types (strings and numbers)", () => {
+  expect(dedupe(["1", 1, "1", 2, 2, "2"])).toEqual(["1", 1, 2, "2"]);
+  expect(dedupe([1, "1", 1, "1"])).toEqual([1, "1"]);
+});
