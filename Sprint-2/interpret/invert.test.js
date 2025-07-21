@@ -18,3 +18,7 @@ test("inverts multiple key-value pairs", () => {
 test("overwrites key if values are not unique", () => {
   expect(invert({ a: 1, b: 1 })).toEqual({ 1: "b" }); // 'b' overwrites 'a'
 });
+
+test("throws error if input is not an object", () => {
+  expect(() => invert("string")).toThrow("Input must be a non-null object");
+});
