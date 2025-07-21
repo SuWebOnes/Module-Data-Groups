@@ -45,3 +45,9 @@ It should return:
 test("returns empty object when given an empty array", () => {
   expect(createLookup([])).toEqual({});
 });
+// dge Case 2: Duplicate country codes (last value wins)
+test("overwrites value if country code is duplicated", () => {
+  const input = [['US', 'USD'], ['US', 'US Dollars']];
+  const expected = { US: 'US Dollars' };
+  expect(createLookup(input)).toEqual(expected);
+});
