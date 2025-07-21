@@ -1,6 +1,6 @@
 const createLookup = require("./lookup.js");
 
-// ✅ Core Test: Normal input of multiple country-currency pairs
+//  Core Test: Normal input of multiple country-currency pairs
 test("creates a country currency code lookup for multiple codes", () => {
   const input = [['US', 'USD'], ['CA', 'CAD'], ['JP', 'JPY']];
   const expected = {
