@@ -35,12 +35,17 @@
 // Overwrote it in every loop
 // e) Fix the implementation of invert (and write tests to prove it's fixed!)
 function invert(obj) {
+  // Validate that input is a non-null object and not an array
+  if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
+    throw new Error("Input must be a non-null object");
+  }
+
   const invertedObj = {};
 
   // Loop over key-value pairs using Object.entries
   for (const [key, value] of Object.entries(obj)) {
-    // Set the value as the key, and the key as the value
-    invertedObj[value] = key;
+    // Swap the key and value
+    invertedObj[String(value)] = key;
   }
 
   return invertedObj;
