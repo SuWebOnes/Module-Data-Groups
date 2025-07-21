@@ -13,3 +13,8 @@ test("inverts a single key-value pair", () => {
 test("inverts multiple key-value pairs", () => {
   expect(invert({ a: 1, b: 2 })).toEqual({ 1: "a", 2: "b" });
 });
+
+// Test: duplicate values (last one wins)
+test("overwrites key if values are not unique", () => {
+  expect(invert({ a: 1, b: 1 })).toEqual({ 1: "b" }); // 'b' overwrites 'a'
+});
