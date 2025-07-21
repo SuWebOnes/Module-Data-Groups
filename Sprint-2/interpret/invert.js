@@ -34,3 +34,14 @@
 // Created a property literally named "key"
 // Overwrote it in every loop
 // e) Fix the implementation of invert (and write tests to prove it's fixed!)
+function invert(obj) {
+  const invertedObj = {};
+
+  // Loop over key-value pairs using Object.entries
+  for (const [key, value] of Object.entries(obj)) {
+    // Set the value as the key, and the key as the value
+    invertedObj[value] = key;
+  }
+
+  return invertedObj;
+}
