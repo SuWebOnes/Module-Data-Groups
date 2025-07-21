@@ -36,3 +36,6 @@ test("tally single item array", () => {
 // Given an invalid input like a string
 // When passed to tally
 // Then it should throw an error
+test("tally throws error on invalid input (non-array)", () => {
+  expect(() => tally("not-an-array")).toThrow("Input must be an array");
+});
