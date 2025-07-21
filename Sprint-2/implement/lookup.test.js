@@ -41,3 +41,7 @@ It should return:
    'CA': 'CAD'
  }
 */
+// Edge Case 1: Empty array input
+test("returns empty object when given an empty array", () => {
+  expect(createLookup([])).toEqual({});
+});
