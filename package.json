@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SuWebOnes/Module-Data-Groups/issues"
   },
-  "homepage": "https://github.com/SuWebOnes/Module-Data-Groups#readme"
+  "homepage": "https://github.com/SuWebOnes/Module-Data-Groups#readme",
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  }
 }
