@@ -3,15 +3,6 @@
   "version": "1.0.0",
   "description": "Like learning a musical instrument, programming requires daily practice.",
   "main": "index.js",
-<<<<<<< HEAD
-=======
-  "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/user-event": "^13.5.0",
-    "jest": "^30.0.5",
-    "jsdom": "^26.1.0"
-  },
->>>>>>> ce930b5 (update: json files)
   "scripts": {
     "test": "jest"
   },
@@ -25,12 +16,5 @@
   "bugs": {
     "url": "https://github.com/SuWebOnes/Module-Data-Groups/issues"
   },
-<<<<<<< HEAD
-  "homepage": "https://github.com/SuWebOnes/Module-Data-Groups#readme",
-  "devDependencies": {
-    "jsdom": "^26.1.0"
-  }
-=======
   "homepage": "https://github.com/SuWebOnes/Module-Data-Groups#readme"
->>>>>>> ce930b5 (update: json files)
 }
