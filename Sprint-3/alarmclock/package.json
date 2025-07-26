@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SuWebOnes/Module-Data-Groups#readme",
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
     "jsdom": "^26.1.0"
   }
 }
