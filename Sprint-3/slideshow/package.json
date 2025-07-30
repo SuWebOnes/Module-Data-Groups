@@ -1,0 +1,12 @@
+{
+  "name": "slideshow",
+  "version": "1.0.0",
+  "description": "First off, once you've branched off `main`, then update the title element in `index.html` to \"Image carousel\"",
+  "main": "slideshow.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
