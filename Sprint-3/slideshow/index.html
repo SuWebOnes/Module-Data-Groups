@@ -10,19 +10,22 @@
   <div class="carousel-container">
     <img id="carousel-img" src="./assets/cute-cat-a.png" alt="Cat image" />
 
-    <div class="controls">
+    <!-- Manual navigation buttons (forward and backward) -->
+     <div class="controls">
       <button id="backward-btn">⬅️ Back</button>
       <button id="forward-btn">Forward ➡️</button>
     </div>
 
-    <div class="auto-controls">
+    <!-- Auto navigation buttons (auto forward/backward and stop) -->
+     <div class="auto-controls">
       <button id="auto-forward">Auto Forward ▶️</button>
       <button id="auto-backward">Auto Backward ◀️</button>
       <button id="stop">⏹ Stop</button>
     </div>
-
+    <!-- Delay input control to let user choose how fast the slideshow auto-plays --> 
     <div class="delay-control">
       <label for="delay-input">Delay (ms):</label>
+      <!-- Input type is number; default value is 2000ms, minimum is 500ms -->
       <input type="number" id="delay-input" value="2000" min="500" />
     </div>
   </div>
