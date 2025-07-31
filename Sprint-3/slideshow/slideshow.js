@@ -53,25 +53,3 @@ function disableAutoButtons(disable) {
   autoForward.disabled = disable;
   autoBack.disabled = disable;
 }
-const delayInput = document.getElementById("delay-input");
-
-function getDelay() {
-  const value = parseInt(delayInput.value, 10);
-  return isNaN(value) || value < 500 ? 2000 : value; // default to 2000ms
-}
-
-autoForward.addEventListener("click", () => {
-  disableAutoButtons(true);
-  intervalId = setInterval(() => {
-    current = (current + 1) % images.length;
-    updateImage();
-  }, getDelay());
-});
-
-autoBack.addEventListener("click", () => {
-  disableAutoButtons(true);
-  intervalId = setInterval(() => {
-    current = (current - 1 + images.length) % images.length;
-    updateImage();
-  }, getDelay());
-});
