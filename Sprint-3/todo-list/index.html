@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -41,4 +42,61 @@
 
   <script src="script.js"></script>
 </body>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Todo List</title>
+
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Optional: Link to custom CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Todo List</h1>
+
+      <!-- Form for adding a new todo -->
+      <form id="todo-form">
+        <div>
+          <!-- Input field for new todo text -->
+          <input
+            id="todoInput"
+            type="text"
+            placeholder="New todo..."
+            required
+          />
+        </div>
+
+        <div>
+          <!-- Button to add new todo -->
+          <button type="submit" class="btn btn-primary mb-3">Add Todo</button>
+
+          <!-- Button to remove all completed todos -->
+          <button
+            type="button"
+            id="remove-all-completed"
+            class="btn btn-danger mb-3"
+          >
+            Remove all completed
+          </button>
+        </div>
+      </form>
+
+      <!-- Unordered list where todos will appear -->
+      <ul id="todo-list" class="list-group">
+        <!-- JavaScript dynamically adds todos here -->
+      </ul>
+    </main>
+
+    <!-- Link to main JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+>>>>>>> 526ad6b (update: fix markups including comments for easy to fix in todo-list/html)
 </html>
