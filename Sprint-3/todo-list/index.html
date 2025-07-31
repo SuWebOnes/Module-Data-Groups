@@ -62,32 +62,28 @@
     <main>
       <h1>Todo List</h1>
 
-      <!-- Form for adding a new todo -->
-      <form id="todo-form">
-        <div>
-          <!-- Input field for new todo text -->
-          <input
-            id="todoInput"
-            type="text"
-            placeholder="New todo..."
-            required
-          />
-        </div>
-
-        <div>
-          <!-- Button to add new todo -->
-          <button type="submit" class="btn btn-primary mb-3">Add Todo</button>
-
-          <!-- Button to remove all completed todos -->
-          <button
-            type="button"
-            id="remove-all-completed"
-            class="btn btn-danger mb-3"
-          >
-            Remove all completed
-          </button>
-        </div>
-      </form>
+  <form id="todo-form">
+    <input
+      type="text"
+      id="todoInput"
+      placeholder="New todo..."
+      aria-label="New todo"
+      required
+    />
+    <input
+      type="date"
+      id="todoDeadline"
+      aria-label="Deadline date (optional)"
+    />
+    <button type="submit" class="btn btn-primary">Add Todo</button>
+    <button
+      type="button"
+      id="remove-all-completed"
+      class="btn btn-primary"
+    >
+      Remove all completed
+    </button>
+  </form>
 
       <!-- Unordered list where todos will appear -->
       <ul id="todo-list" class="list-group">
