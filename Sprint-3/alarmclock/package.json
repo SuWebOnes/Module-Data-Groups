@@ -25,5 +25,13 @@
     "setupFilesAfterEnv": [
       "./jest.setup.js"
     ]
-  }
+  },
+  "main": "alarmclock.js",
+  "dependencies": {
+    "aria-query": "^5.3.2",
+    "chalk": "^3.0.0",
+    "dom-accessibility-api": "^0.6.3"
+  },
+  "keywords": [],
+  "author": ""
 }
