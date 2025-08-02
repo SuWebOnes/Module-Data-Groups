@@ -4,7 +4,7 @@
   "description": "Like learning a musical instrument, programming requires daily practice.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --config=../jest.config.js alarmclock"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/SuWebOnes/Module-Data-Groups/issues"
   },
-  "homepage": "https://github.com/SuWebOnes/Module-Data-Groups#readme",
+  "homepage": "https://github.com/CodeYourFuture/Module-Data-Groups#readme",
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "jsdom": "^26.1.0"
