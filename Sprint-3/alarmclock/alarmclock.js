@@ -35,6 +35,7 @@ function setAlarm() {
     if (timeRemaining <= 0) {
       clearInterval(intervalId);
       playAlarm();
+      startFlashingBackground(); // Flash background when alarm finishes
     }
   }, 1000);
 }
@@ -69,11 +70,63 @@ function pauseAlarm(resetAudio = false) {
 }
 
 /**
+ * Flashes the background color when alarm finishes
+ */
+function startFlashingBackground() {
+  let flashCount = 0;
+  const maxFlashes = 10; // Number of flashes (5 times)
+  const originalColor = document.body.style.backgroundColor;
+  const flashInterval = setInterval(() => {
+    document.body.style.backgroundColor =
+      document.body.style.backgroundColor === "red" ? "white" : "red";
+    flashCount++;
+    if (flashCount >= maxFlashes) {
+      clearInterval(flashInterval);
+      document.body.style.backgroundColor = originalColor;
+    }
+  }, 300);
+}
+
+/**
+ * Pauses the countdown timer
+ */
+function pauseTimer() {
+  if (intervalId) {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+}
+
+/**
+ * Resumes the countdown timer
+ */
+function resumeTimer() {
+  if (!intervalId && timeRemaining > 0) {
+    intervalId = setInterval(() => {
+      timeRemaining--;
+      updateTimeDisplay();
+
+      if (timeRemaining <= 0) {
+        clearInterval(intervalId);
+        playAlarm();
+        startFlashingBackground();
+      }
+    }, 1000);
+  }
+}
+
+/**
  * Setup event listeners after page load
  */
 function setup() {
+  // Set alarm button
   document.getElementById("set").addEventListener("click", setAlarm);
+  // Stop alarm button
   document.getElementById("stop").addEventListener("click", () => pauseAlarm(true));
+  // Pause timer button
+  document.getElementById("pause").addEventListener("click", pauseTimer);
+  // Resume timer button
+  document.getElementById("resume").addEventListener("click", resumeTimer);
 }
 
 window.onload = setup;
