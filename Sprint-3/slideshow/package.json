@@ -1,12 +1,17 @@
 {
   "name": "slideshow",
   "version": "1.0.0",
-  "description": "First off, once you've branched off `main`, then update the title element in `index.html` to \"Image carousel\"",
-  "main": "slideshow.js",
+  "license": "CC-BY-SA-4.0",
+  "description": "You must update this package",
   "scripts": {
-    "test": "jest"
+    "test": "jest --config=../jest.config.js slideshow"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeYourFuture/CYF-Coursework-Template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeYourFuture/CYF-Coursework-Template/issues"
+  },
+  "homepage": "https://github.com/CodeYourFuture/CYF-Coursework-Template#readme"
 }
